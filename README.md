@@ -2,7 +2,7 @@
 
 [![Build](https://github.com/lachlanmcdonald/gulp-svgo/actions/workflows/build.yml/badge.svg?branch=main)][build-link] [![npm version](https://badge.fury.io/js/%40lmcd%2Fgulp-svgo.svg)][package-link] [![License](https://img.shields.io/badge/License-MIT-blue.svg)][license-link] 
 
-**gulp-svgo** is a [svgo]-wrapper for [Gulp].
+**gulp-svgo** is a [SVGO]-wrapper for [Gulp].
 
 ## Installation
 
@@ -23,7 +23,7 @@ npm install --save-dev @lmcd/gulp-svgo svgo
 Where:
 
 - `svgo` must be the [**svgo** package][svgo-npm].
-- `options` can be any key-value pairs, but as these are passed directly to svgo's `optimize` function, should correspond with svgo's configuration options.
+- `options` can be any key-value pairs, but as these are passed directly to SVGO's `optimize` function, should correspond with SVGO's configuration options.
 
 ## Implementation notes
 
