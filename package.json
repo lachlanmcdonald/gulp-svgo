@@ -31,7 +31,7 @@
 		"svgo": "latest",
 		"vinyl": "^3.0.0"
 	},
-	"description": "",
+	"description": "A svgo-wrapper for Gulp.",
 	"bugs": {
 		"url": "https://github.com/lachlanmcdonald/gulp-svgo/issues"
 	},
