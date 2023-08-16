@@ -42,6 +42,6 @@
 	"homepage": "https://github.com/lachlanmcdonald/gulp-svgo",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/lachlanmcdonald/gulp-svgo.git"
+		"url": "git+https://github.com/lachlanmcdonald/gulp-svgo.git"
 	}
 }
