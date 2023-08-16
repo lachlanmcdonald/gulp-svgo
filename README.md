@@ -25,6 +25,20 @@ Where:
 - `svgo` must be the [**svgo** package][svgo-npm].
 - `options` can be any key-value pairs, but as these are passed directly to SVGO's `optimize` function, should correspond with SVGO's configuration options.
 
+For example:
+
+```js
+const { src, dest } = require('gulp');
+const gulpSvgo = require('@lmcd/gulp-svgo');
+const svgo = require('svgo');
+
+function minify() {
+  return src('./svg/*.svg')
+    .pipe(gulpSvgo(svgo))
+    .pipe(dest('./svg'));
+};
+```
+
 ## Implementation notes
 
 - This plugin does not support Gulp versions earlier than Gulp 4.
