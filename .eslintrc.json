@@ -1,0 +1,18 @@
+{
+	"root": true,
+	"extends": [
+		"eslint:recommended",
+		"@lmcd/eslint-config"
+	],
+	"plugins": [
+		"jest"
+	],
+	"parserOptions": {
+		"ecmaVersion": "latest"
+	},
+	"env": {
+		"jest/globals": true,
+		"es6": true,
+		"node": true
+	}
+}
