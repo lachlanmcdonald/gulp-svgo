@@ -41,7 +41,8 @@ function minify() {
 
 ## Implementation notes
 
-- This plugin automatically disables the `removeViewBox` plugin, due to the issues it causes for new users.
+- By default, this plugin will disable the `removeViewBox` SVGO plugin.
+- This plugin does not fail if `svgo` encounters a syntax error in the input SVG files and will instead output the file unchanged.
 - This plugin does not support Gulp versions earlier than Gulp 4.
 - This plugin does not automatically load `svgo.config.js`.
 - Passing a character-encodings other than UTF-8 is not explicitly disallowed, but the results are indeterminate.
