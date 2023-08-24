@@ -2,7 +2,7 @@
 
 [![Build](https://github.com/lachlanmcdonald/gulp-svgo/actions/workflows/build.yml/badge.svg?branch=main)][build-link] [![npm version](https://badge.fury.io/js/%40lmcd%2Fgulp-svgo.svg)][package-link] [![License](https://img.shields.io/badge/License-MIT-blue.svg)][license-link] 
 
-**gulp-svgo** is a [SVGO]-wrapper for [Gulp].
+**gulp-svgo** is a [SVGO]-wrapper for [Gulp]. Compatible with all modern versions of SVGO.
 
 ## Installation
 
