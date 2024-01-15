@@ -65,10 +65,10 @@ module.exports = (svgo, options) => {
 				const pad = ' '.repeat(PLUGIN_NAME.length + 2);
 
 				const message = [
-					`${chalk.bold(PLUGIN_NAME)}: ${chalk.yellow(e.reason)}`,
-					`${pad}${chalk.whiteBright('Path')}: ${relativePath}`,
-					`${pad}${chalk.whiteBright('Line')}: ${e.line}`,
-					`${pad}${chalk.whiteBright('Column')}: ${e.column}`,
+					`${ chalk.bold(PLUGIN_NAME) }: ${ chalk.yellow(e.reason) }`,
+					`${ pad }${ chalk.whiteBright('Path') }: ${ relativePath }`,
+					`${ pad }${ chalk.whiteBright('Line') }: ${ e.line }`,
+					`${ pad }${ chalk.whiteBright('Column') }: ${ e.column }`,
 				].join('\n');
 
 				process.stderr.write(message + '\n');
