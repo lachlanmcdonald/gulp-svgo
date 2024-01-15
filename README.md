@@ -6,26 +6,13 @@
 
 ## Installation
 
-To use **gulp-svgo**, you must install both **gulp-svgo** itself and the [**svgo** package][svgo-npm].
+To use **gulp-svgo**, you must install both **gulp-svgo** and the [**svgo** package][svgo-npm].
 
 ```sh
-npm install --save-dev @lmcd/gulp-svgo svgo
+npm install --save-dev svgo @lmcd/gulp-svgo
 ```
 
 ## Usage
-
-**gulp-svgo** exports factory method with the following signature:
-
-```js
-(svgo: svgo, options?: Record<string, any>)
-```
-
-Where:
-
-- `svgo` must be the [**svgo** package][svgo-npm].
-- `options` can be any key-value pairs, but as these are passed directly to SVGO's `optimize` function, should correspond with SVGO's configuration options.
-
-For example:
 
 ```js
 const { src, dest } = require('gulp');
@@ -38,6 +25,17 @@ function minify() {
     .pipe(dest('./svg'));
 };
 ```
+
+**gulp-svgo** exports factory method with the following signature:
+
+```js
+(svgo: svgo, options?: Record<string, any>)
+```
+
+Where:
+
+- `svgo` must be the [**svgo** package][svgo-npm].
+- `options` can be any key-value pairs, but as these are passed directly to SVGO's `optimize` function, these should correspond with SVGO's configuration options.
 
 ## Implementation notes
 
