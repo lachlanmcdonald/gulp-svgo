@@ -5,6 +5,7 @@
 		"@lmcd/eslint-config"
 	],
 	"plugins": [
+		"@stylistic/js",
 		"jest"
 	],
 	"parserOptions": {
