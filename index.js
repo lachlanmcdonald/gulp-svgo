@@ -1,7 +1,7 @@
-const PluginError = require('plugin-error');
-const { Transform } = require('stream');
-const chalk = require('chalk');
-const path = require('path');
+import chalk from 'chalk';
+import path from 'node:path';
+import { Transform } from 'node:stream';
+import PluginError from 'plugin-error';
 
 const PLUGIN_NAME = 'gulp-svgo';
 
@@ -16,8 +16,7 @@ const transformer = transform => {
 	return stream;
 };
 
-
-module.exports = (svgo, options) => {
+const Plugin = (svgo, options) => {
 	if (typeof svgo.optimize !== 'function') {
 		throw new Error('The provided instance of SVGO does not export an optimize() method.');
 	}
@@ -80,3 +79,5 @@ module.exports = (svgo, options) => {
 		}
 	});
 };
+
+export default Plugin;
