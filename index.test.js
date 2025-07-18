@@ -1,8 +1,9 @@
-const Vinyl = require('vinyl');
-const svgo = require('svgo');
-const path = require('path');
-const fs = require('fs');
-const compiler = require('.');
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import svgo from 'svgo';
+import Vinyl from 'vinyl';
+import compiler from './index.js';
 
 /**
  * Normalises newlines and trims whitespace from the beginning and
@@ -13,6 +14,9 @@ const compiler = require('.');
 const normalise = input => {
 	return input.toString().replace(/[\r\n]+/gu, '\n').trim();
 };
+
+// eslint-disable-next-line no-underscore-dangle
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /**
  * @param {string} svgContents
