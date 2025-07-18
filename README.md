@@ -9,27 +9,20 @@
 To use **gulp-svgo**, you must install both **gulp-svgo** and the [**svgo** package][svgo-npm].
 
 ```sh
-npm install --save-dev svgo @lmcd/gulp-svgo
+npm install --save-dev @lmcd/gulp-svgo svgo
 ```
 
 ## Usage
 
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import svgo from 'svgo';
-import Vinyl from 'vinyl';
-import compiler from './index.js';
-
 ```js
-import { src, dest } from 'gulp';
+import * as svgo from 'svgo';
 import gulpSvgo from '@lmcd/gulp-svgo';
-import svgo from 'svgo';
+import { src, dest } from 'gulp';
 
-export const minify = () => {
-  return src('./svg/*.svg')
-    .pipe(gulpSvgo(svgo))
-    .pipe(dest('./svg'));
+export const minify = () => {
+	return src('svgs/*.svg')
+		.pipe(gulpSvgo(svgo))
+		.pipe(dest('dest'));
 };
 ```
 
