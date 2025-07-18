@@ -14,12 +14,19 @@ npm install --save-dev svgo @lmcd/gulp-svgo
 
 ## Usage
 
-```js
-const { src, dest } = require('gulp');
-const gulpSvgo = require('@lmcd/gulp-svgo');
-const svgo = require('svgo');
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import svgo from 'svgo';
+import Vinyl from 'vinyl';
+import compiler from './index.js';
 
-function minify() {
+```js
+import { src, dest } from 'gulp';
+import gulpSvgo from '@lmcd/gulp-svgo';
+import svgo from 'svgo';
+
+export const minify = () => {
   return src('./svg/*.svg')
     .pipe(gulpSvgo(svgo))
     .pipe(dest('./svg'));
