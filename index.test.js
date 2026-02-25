@@ -43,9 +43,9 @@ const compile = (svgContents, options) => {
 
 describe('Parsing SVGs', () => {
 	test('Does not change invalid files', async () => {
-		const file = await compile(`<svg</svg>`);
+		const file = await compile('<svg</svg>');
 
-		expect(normalise(file.contents)).toBe(`<svg</svg>`);
+		expect(normalise(file.contents)).toBe('<svg</svg>');
 	});
 
 	test('Compiles and preserves whitespace', async () => {
@@ -57,9 +57,9 @@ describe('Parsing SVGs', () => {
 	});
 
 	test('Does nothing on empty files', async () => {
-		const file = await compile(``);
+		const file = await compile('');
 
-		expect(normalise(file.contents)).toBe(``);
+		expect(normalise(file.contents)).toBe('');
 	});
 });
 

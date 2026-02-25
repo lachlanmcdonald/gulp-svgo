@@ -22,15 +22,17 @@
 	],
 	"license": "MIT",
 	"dependencies": {
-		"chalk": "^5.4.1",
+		"chalk": "^5.6.2",
 		"plugin-error": "^2.0.1"
 	},
 	"devDependencies": {
-		"@lmcd/eslint-config": "^0.7.0",
-		"@stylistic/eslint-plugin": "^5.2.0",
-		"eslint": "^9.31.0",
-		"eslint-plugin-jest": "^29.0.1",
-		"jest": "^30.0.4",
+		"@eslint/js": "^10.0.1",
+		"@lmcd/eslint-config": "^0.8.1",
+		"@stylistic/eslint-plugin": "^5.9.0",
+		"eslint": "^9.39.3",
+		"eslint-plugin-jest": "^29.15.0",
+		"globals": "^17.3.0",
+		"jest": "^30.2.0",
 		"svgo": "latest",
 		"vinyl": "^3.0.1"
 	},
